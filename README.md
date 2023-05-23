@@ -1,5 +1,6 @@
 # PropertiesFile_CSharp
-A simple class for working with .properties files. / Простой класс для работы с файлами .properties.\n
+A simple class for working with .properties files. / Простой класс для работы с файлами .properties.
+
 Usage example: / Пример использования:
 
 ```properties
