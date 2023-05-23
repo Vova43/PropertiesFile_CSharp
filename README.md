@@ -1,7 +1,10 @@
 # PropertiesFile_CSharp
 A simple class for working with .properties files. / Простой класс для работы с файлами .properties.
 Usage example: / Пример использования:
-
+```properties
+Form.Point.Top=600
+Form.Point.Left=459
+```
 ```c#
 // Save settings / Сохранить настройки
 string FileConfig = "Config.properties";
