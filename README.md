@@ -3,7 +3,7 @@ A simple class for working with .properties files. / Простой класс �
 Usage example: / Пример использования:
 
 ```properties
-Config.properties
+File: Config.properties
 Form.Point.Top=600
 Form.Point.Left=459
 ```
