@@ -14,7 +14,6 @@ public class PropertiesFile {
 
     public void addKeyAndValue(string key, string value) {
         if (key != "" || value != "") {
-            //System.Console.WriteLine(key + " => " + value);
             keys.Add(key);
             values.Add(value);
         }
@@ -46,15 +45,12 @@ public class PropertiesFile {
                 if (isComment) {
                     isComment = false;
                     addKeyAndValue(key, value);
-                    //if (key != "" || value != "")
-                    //    System.Console.WriteLine(key + " => " + value);
                     key = "";
                     value = "";
                     continue;
                 }
                 isComment = false;
                 addKeyAndValue(key, value);
-                //System.Console.WriteLine(key + " => " + value);
                 key = "";
                 value = "";
                 continue;
@@ -67,8 +63,6 @@ public class PropertiesFile {
                 key += ch;
         }
         addKeyAndValue(key, value);
-        //if (key != "" || value != "")
-        //    System.Console.WriteLine(key + " => " + value);
     }
 
     public void saveFile(string filePath) {
@@ -100,7 +94,6 @@ public class PropertiesFile {
 
     public void removeKeyAndValue(string key, string value) {
         if (key != "" || value != "") {
-            //System.Console.WriteLine(key + " => " + value);
             keys.Remove(key);
             values.Remove(value);
         }
