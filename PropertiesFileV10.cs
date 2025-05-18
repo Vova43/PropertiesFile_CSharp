@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -63,6 +63,10 @@ public class PropertiesFile {
     public void SaveDictionary() {
         using (StreamWriter writer = new StreamWriter(FileName)) {
             foreach (var item in DictionaryProperties) {
+                if (item.Key.StartsWith("#")) {
+                    writer.WriteLine(item.Key + item.Value);
+                    continue;
+                }
                 writer.WriteLine(item.Key + separatorChar + item.Value);
             }
         }
@@ -71,6 +75,10 @@ public class PropertiesFile {
     public void SaveDictionary(string FileName) {
         using (StreamWriter writer = new StreamWriter(FileName)) {
             foreach (var item in DictionaryProperties) {
+                if (item.Key.StartsWith("#")) {
+                    writer.WriteLine(item.Key + item.Value);
+                    continue;
+                }
                 writer.WriteLine(item.Key + separatorChar + item.Value);
             }
         }
@@ -81,6 +89,10 @@ public class PropertiesFile {
             this.FileName = FileName;
         using (StreamWriter writer = new StreamWriter(FileName)) {
             foreach (var item in DictionaryProperties) {
+                if (item.Key.StartsWith("#")) {
+                    writer.WriteLine(item.Key + item.Value);
+                    continue;
+                }
                 writer.WriteLine(item.Key + separatorChar + item.Value);
             }
         }
